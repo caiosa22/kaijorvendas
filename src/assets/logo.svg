@@ -1,0 +1,26 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Circle -->
+  <circle cx="100" cy="100" r="85" fill="url(#blueGradient)" opacity="0.1"/>
+  
+  <!-- Infinity Symbol with 3D effect -->
+  <g transform="translate(100, 100)">
+    <!-- Shadow/Back layer -->
+    <path d="M -50 -25 Q -35 -25 -25 -15 Q -15 -5 -15 0 Q -15 5 -25 15 Q -35 25 -50 25 Q -50 25 -50 25 Q -50 25 -45 25 Q -40 25 -35 15 Q -30 5 -30 0 Q -30 -5 -35 -15 Q -40 -25 -45 -25 Q -50 -25 -50 -25 Z" 
+          fill="url(#blueGradient)" opacity="0.3" transform="translate(3, 3)"/>
+    
+    <!-- Main infinity symbol -->
+    <path d="M -50 -25 Q -35 -25 -25 -15 Q -15 -5 -15 0 Q -15 5 -25 15 Q -35 25 -50 25 Q -50 25 -50 25 Q -50 25 -45 25 Q -40 25 -35 15 Q -30 5 -30 0 Q -30 -5 -35 -15 Q -40 -25 -45 -25 Q -50 -25 -50 -25 Z" 
+          fill="url(#blueGradient)" stroke="url(#blueGradient)" stroke-width="1"/>
+    
+    <path d="M 50 -25 Q 35 -25 25 -15 Q 15 -5 15 0 Q 15 5 25 15 Q 35 25 50 25 Q 50 25 50 25 Q 50 25 45 25 Q 40 25 35 15 Q 30 5 30 0 Q 30 -5 35 -15 Q 40 -25 45 -25 Q 50 -25 50 -25 Z" 
+          fill="url(#blueGradient)" stroke="url(#blueGradient)" stroke-width="1"/>
+  </g>
+</svg>
+
