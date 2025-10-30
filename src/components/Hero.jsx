@@ -38,7 +38,7 @@ function Hero({ showCTA = false }) {
               "Funcionário de IA" no WhatsApp
             </span>
             <span className="block mt-1">
-              de Graça, em Minutos e Sem Saber Nada de Tecnologia
+              de Graça e em Minutos
             </span>
           </h1>
 
