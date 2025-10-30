@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import Problems from './components/Problems'
 import Solution from './components/Solution'
 import Features from './components/Features'
+import Mentoria from './components/Mentoria'
 import Pricing from './components/Pricing'
 import Guarantee from './components/Guarantee'
 import CTA from './components/CTA'
@@ -16,6 +17,7 @@ function App() {
       <Problems />
       <Solution />
       <Features />
+      <Mentoria />
       <Pricing />
       <Guarantee />
       <CTA />
