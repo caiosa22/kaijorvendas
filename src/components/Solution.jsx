@@ -124,7 +124,7 @@ function Solution() {
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl shadow-lg transition-all duration-300"
             >
-              Quero Acesso Completamente Grátis
+              Quero começar agora
               <ArrowRight className="w-5 h-5" />
             </motion.a>
           </motion.div>

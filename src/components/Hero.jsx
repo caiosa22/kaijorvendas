@@ -1,10 +1,18 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Play } from 'lucide-react'
-import { useState } from 'react'
-import ReactPlayer from 'react-player'
+import { ArrowRight } from 'lucide-react'
+import { useEffect } from 'react'
 
 function Hero() {
-  const [showVideo, setShowVideo] = useState(false)
+  useEffect(() => {
+    const existing = document.querySelector('script[data-vturb-player="6902e6d9d7ac47da5676541e"]')
+    if (!existing) {
+      const s = document.createElement('script')
+      s.src = 'https://scripts.converteai.net/d79b1e90-9b25-4f9c-ab80-515c305c96fc/players/6902e6d9d7ac47da5676541e/v4/player.js'
+      s.async = true
+      s.setAttribute('data-vturb-player', '6902e6d9d7ac47da5676541e')
+      document.head.appendChild(s)
+    }
+  }, [])
 
   return (
     <section className="relative min-h-[90vh] flex items-start justify-center overflow-hidden bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 pt-8 pb-8">
@@ -35,47 +43,10 @@ function Hero() {
           </h1>
 
           {/* Video Section - Vertical 9:16 */}
-          <div className="mb-3 relative max-w-[260px] mx-auto">
-            {!showVideo ? (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="relative aspect-[9/16] bg-black/20 rounded-xl overflow-hidden backdrop-blur-sm border-2 border-white/20"
-              >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button
-                    onClick={() => setShowVideo(true)}
-                    className="group relative"
-                  >
-                    <div className="absolute inset-0 bg-white/20 rounded-full blur-xl group-hover:blur-2xl transition-all" />
-                    <div className="relative w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform">
-                      <Play className="w-8 h-8 md:w-10 md:h-10 text-primary-600 ml-1" fill="currentColor" />
-                    </div>
-                  </button>
-                </div>
-                <div className="absolute bottom-2 left-2 right-2 p-2 bg-white/10 backdrop-blur-md rounded-lg">
-                  <p className="text-white text-xs font-medium text-center">
-                    Assista em 3 minutos
-                  </p>
-                </div>
-              </motion.div>
-            ) : (
-              <div className="relative aspect-[9/16] bg-black rounded-xl overflow-hidden">
-                <ReactPlayer
-                  url="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" // SUBSTITUIR pela URL real do vídeo
-                  width="100%"
-                  height="100%"
-                  playing
-                  controls
-                  config={{
-                    youtube: {
-                      playerVars: { modestbranding: 1, showinfo: 0 }
-                    }
-                  }}
-                />
-              </div>
-            )}
+          <div className="mb-3 relative w-full max-w-[400px] mx-auto">
+            <div className="relative aspect-[9/16] w-full">
+              <vturb-smartplayer id="vid-6902e6d9d7ac47da5676541e" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }} />
+            </div>
           </div>
 
           {/* CTA */}
@@ -87,7 +58,7 @@ function Hero() {
           >
             <a
               href="#pricing"
-              className="group flex items-center gap-2 px-5 py-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 text-xs"
+              className="group flex items-center gap-2 px-8 py-3 md:px-12 md:py-4 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 text-sm md:text-lg"
             >
               Garantir o meu acesso
               <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
