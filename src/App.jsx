@@ -9,6 +9,7 @@ import Pricing from './components/Pricing'
 import Guarantee from './components/Guarantee'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 function App() {
   const [showRest, setShowRest] = useState(false)
@@ -31,6 +32,7 @@ function App() {
           <Guarantee />
           <CTA />
           <Footer />
+          <FloatingWhatsApp />
         </>
       )}
     </div>
