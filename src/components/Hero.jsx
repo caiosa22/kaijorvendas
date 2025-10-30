@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { useEffect } from 'react'
 
-function Hero() {
+function Hero({ showCTA = false }) {
   useEffect(() => {
     const existing = document.querySelector('script[data-vturb-player="6902e6d9d7ac47da5676541e"]')
     if (!existing) {
@@ -38,7 +38,7 @@ function Hero() {
               "Funcionário de IA" no WhatsApp
             </span>
             <span className="block mt-1">
-              de Graça e em Minutos
+              de Graça, em Minutos e Sem Saber Nada de Tecnologia
             </span>
           </h1>
 
@@ -50,58 +50,64 @@ function Hero() {
           </div>
 
           {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="flex flex-col gap-2 justify-center items-center"
-          >
-            <a
-              href="https://pay.kiwify.com.br/IVbCqZJ"
-              className="group flex items-center gap-2 px-8 py-3 md:px-12 md:py-4 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 text-sm md:text-lg"
+          {showCTA && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="flex flex-col gap-2 justify-center items-center"
             >
-              Garantir o meu acesso
-              <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <p className="text-white/80 text-xs">
-              ✓ Sem compromisso • ✓ 7 dias de garantia
-            </p>
-          </motion.div>
+              <a
+                href="https://pay.kiwify.com.br/IVbCqZJ"
+                className="group flex items-center gap-3 px-10 py-4 md:px-16 md:py-5 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-extrabold rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-300 text-base md:text-2xl"
+              >
+                Garantir o meu acesso
+                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <p className="text-white/80 text-xs">
+                ✓ Sem compromisso • ✓ 7 dias de garantia
+              </p>
+            </motion.div>
+          )}
 
           {/* Social Proof */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="mt-3 flex flex-wrap justify-center items-center gap-3 text-white/80 text-xs"
-          >
-            <div className="flex items-center gap-2">
-              <span className="text-yellow-300 text-xl">★</span>
-              <span>Centenas de Empresários Já Usam</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-300 text-xl">✓</span>
-              <span>IA 100% Integrada</span>
-            </div>
-          </motion.div>
+          {showCTA && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="mt-3 flex flex-wrap justify-center items-center gap-3 text-white/80 text-xs"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-yellow-300 text-xl">★</span>
+                <span>Centenas de Empresários Já Usam</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-300 text-xl">✓</span>
+                <span>IA 100% Integrada</span>
+              </div>
+            </motion.div>
+          )}
         </motion.div>
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
+      {showCTA && (
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="text-white/60"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 1 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
-          <ArrowRight className="w-6 h-6 rotate-90" />
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="text-white/60"
+          >
+            <ArrowRight className="w-6 h-6 rotate-90" />
+          </motion.div>
         </motion.div>
-      </motion.div>
+      )}
     </section>
   )
 }

@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import './index.css'
 import Hero from './components/Hero'
 import Problems from './components/Problems'
@@ -11,17 +11,28 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 
 function App() {
+  const [showRest, setShowRest] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowRest(true), 230000) // 3min50s
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div className="min-h-screen bg-white">
-      <Hero />
-      <Problems />
-      <Solution />
-      <Features />
-      <Mentoria />
-      <Pricing />
-      <Guarantee />
-      <CTA />
-      <Footer />
+      <Hero showCTA={showRest} />
+      {showRest && (
+        <>
+          <Problems />
+          <Solution />
+          <Features />
+          <Mentoria />
+          <Pricing />
+          <Guarantee />
+          <CTA />
+          <Footer />
+        </>
+      )}
     </div>
   )
 }
