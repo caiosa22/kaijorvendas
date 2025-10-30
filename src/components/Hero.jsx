@@ -43,9 +43,9 @@ function Hero({ showCTA = false }) {
           </h1>
 
           {/* Video Section - Vertical 9:16 */}
-          <div className="mb-3 relative w-full max-w-[400px] mx-auto">
+          <div className="mb-3 relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] mx-auto">
             <div className="relative aspect-[9/16] w-full">
-              <vturb-smartplayer id="vid-6902e6d9d7ac47da5676541e" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }} />
+              <vturb-smartplayer id="vid-6902e6d9d7ac47da5676541e" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '360px' }} />
             </div>
           </div>
 
