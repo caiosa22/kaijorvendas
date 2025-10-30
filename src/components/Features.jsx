@@ -136,7 +136,7 @@ function Features() {
           className="text-center"
         >
           <motion.a
-            href="#pricing"
+            href="https://pay.kiwify.com.br/IVbCqZJ"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold rounded-xl shadow-lg transition-all duration-300"

@@ -71,18 +71,9 @@ function Problems() {
             Tudo isso é <span className="text-red-600">cansativo</span> e{' '}
             <span className="text-red-600">caro demais</span> de manter.
           </p>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600">
             <span className="font-semibold">Mas existe uma solução...</span>
           </p>
-          <motion.a
-            href="#pricing"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl shadow-lg transition-all duration-300"
-          >
-            Ver a Solução Agora
-            <ArrowRight className="w-5 h-5" />
-          </motion.a>
         </motion.div>
       </div>
     </section>

@@ -131,7 +131,7 @@ function CTA() {
             className="text-center"
           >
             <a
-              href="#"
+              href="https://pay.kiwify.com.br/IVbCqZJ"
               className="inline-block px-12 py-6 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold text-2xl rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               Clique Aqui e Garanta Seu Acesso Agora

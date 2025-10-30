@@ -32,13 +32,13 @@ function Hero() {
           className="max-w-4xl mx-auto text-center"
         >
           {/* Headline */}
-          <h1 className="text-lg leading-tight text-white mb-3 text-balance">
+          <h1 className="text-lg leading-tight text-white mb-3 text-balance font-extrabold">
             <span className="block">Descubra Como Qualquer Negócio Pode Ter um</span>
-            <span className="block mt-1 text-yellow-300">
+            <span className="block mt-1 text-yellow-300 font-extrabold">
               "Funcionário de IA" no WhatsApp
             </span>
             <span className="block mt-1">
-              de Graça, em Minutos e Sem Saber Nada de Tecnologia
+              de Graça e em Minutos
             </span>
           </h1>
 
@@ -57,7 +57,7 @@ function Hero() {
             className="flex flex-col gap-2 justify-center items-center"
           >
             <a
-              href="#pricing"
+              href="https://pay.kiwify.com.br/IVbCqZJ"
               className="group flex items-center gap-2 px-8 py-3 md:px-12 md:py-4 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 text-sm md:text-lg"
             >
               Garantir o meu acesso

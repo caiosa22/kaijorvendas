@@ -119,7 +119,7 @@ function Solution() {
             className="text-center mt-12"
           >
             <motion.a
-              href="#pricing"
+              href="https://pay.kiwify.com.br/IVbCqZJ"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl shadow-lg transition-all duration-300"

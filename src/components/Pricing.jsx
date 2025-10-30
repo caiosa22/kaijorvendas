@@ -124,7 +124,7 @@ function Pricing() {
 
                 {/* CTA Button */}
                 <motion.a
-                  href="#"
+                  href="https://pay.kiwify.com.br/IVbCqZJ"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="block w-full py-6 bg-primary-600 hover:bg-primary-700 text-white text-center text-2xl font-bold rounded-xl shadow-lg transition-all duration-300 relative overflow-hidden group"
