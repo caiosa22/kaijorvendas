@@ -1,41 +1,16 @@
-import { lazy, Suspense, useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.css'
-import Hero from './components/Hero'
-import Problems from './components/Problems'
-import Solution from './components/Solution'
-import Features from './components/Features'
-import Mentoria from './components/Mentoria'
-import Pricing from './components/Pricing'
-import Guarantee from './components/Guarantee'
-import CTA from './components/CTA'
-import Footer from './components/Footer'
-import FloatingWhatsApp from './components/FloatingWhatsApp'
+import Landing from './pages/Landing'
+import BlackVarejo from './pages/BlackVarejo'
 
 function App() {
-  const [showRest, setShowRest] = useState(false)
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowRest(true), 230000) // 3min50s
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
-    <div className="min-h-screen bg-white">
-      <Hero showCTA={showRest} />
-      {showRest && (
-        <>
-          <Problems />
-          <Solution />
-          <Features />
-          <Mentoria />
-          <Pricing />
-          <Guarantee />
-          <CTA />
-          <Footer />
-          <FloatingWhatsApp />
-        </>
-      )}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/varejo" element={<BlackVarejo />} />
+      </Routes>
+    </Router>
   )
 }
 
