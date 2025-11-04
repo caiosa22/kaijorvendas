@@ -28,7 +28,7 @@ function WorkshopCTA() {
             className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-full font-black text-sm mb-8 shadow-lg"
           >
             <Clock className="w-5 h-5" />
-            VAGAS LIMITADAS • GARANTA JÁ O SEU
+            VAGAS LIMITADAS • GARANTA JÁ
           </motion.div>
 
           {/* Main CTA */}

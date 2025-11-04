@@ -5,42 +5,41 @@ import { ArrowRight } from 'lucide-react'
 function WorkshopPricing() {
   const plans = [
     {
-      name: 'Ingresso Individual',
-      price: 'R$ 10',
-      link: 'https://pay.kiwify.com.br/YuhVoH8',
-      icon: ShoppingCart,
-      features: [
-        'Acesso ao workshop ao vivo',
-        '2 Agentes de IA práticos',
-        'Templates exclusivos',
-        'Suporte durante o workshop',
-        'Certificado digital',
-        'Gravação disponível por 30 dias'
-      ],
-      gradient: 'from-orange-500 to-red-600',
-      isPopular: false
-    },
-    {
       name: 'Ingresso Duplo',
       price: 'R$ 15',
       originalPrice: 'R$ 20',
       link: 'https://pay.kiwify.com.br/gn2LukF',
       icon: Users,
       features: [
-        'Tudo do plano Individual',
-        'Você + 1 Sócio convidado',
-        '2 Acessos separados',
-        '2 Certificados digitais',
-        'Prioridade no suporte',
-        'Material bônus extra'
+        'Você + Um sócio ou convidado',
+        'Acesso ao workshop ao vivo',
+        'Certificado Digital',
+        'Bônus: 10 Melhores Ferramentas de IA para Empresas',
+        'Bônus: Script de Alta Conversão no WhatsApp',
+        'Gravação por 1 ano'
       ],
       gradient: 'from-yellow-500 to-orange-600',
-      isPopular: true
+      isPopular: true,
+      subtitle: 'Economia de 50% no segundo ingresso'
+    },
+    {
+      name: 'Ingresso Individual',
+      price: 'R$ 10',
+      link: 'https://pay.kiwify.com.br/YuhVoH8',
+      icon: ShoppingCart,
+      features: [
+        'Acesso ao workshop ao vivo',
+        'Certificado Digital',
+        'Bônus: 10 Melhores Ferramentas de IA para Empresas',
+        'Gravação por 1 ano'
+      ],
+      gradient: 'from-orange-500 to-red-600',
+      isPopular: false
     }
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+    <section id="ofertas" className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
@@ -109,7 +108,10 @@ function WorkshopPricing() {
                 </div>
 
                 {/* Name */}
-                <h3 className="text-2xl font-black text-white mb-4">{plan.name}</h3>
+                <h3 className="text-2xl font-black text-white mb-2">{plan.name}</h3>
+                {plan.subtitle && (
+                  <p className="text-sm text-yellow-400 font-semibold mb-4">{plan.subtitle}</p>
+                )}
 
                 {/* Price */}
                 <div className="mb-8">

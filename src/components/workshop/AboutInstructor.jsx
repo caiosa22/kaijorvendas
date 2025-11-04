@@ -61,9 +61,9 @@ function AboutInstructor() {
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-yellow-500/30 rounded-3xl blur-3xl transform scale-110" />
                 
                 {/* Image Container */}
-                <div className="relative bg-gradient-to-br from-gray-800 to-black rounded-3xl p-2 shadow-2xl">
+                <div className="relative rounded-3xl">
                   <img
-                    src="https://i.postimg.cc/J0Q4wy2m/Co-pia-de-Solucoes-de-IA-2-pdf.png"
+                    src="https://i.postimg.cc/Z5wMTsHy/Eu-1.png"
                     alt="Caio Santos - Especialista em IA"
                     className="w-full h-auto rounded-2xl"
                   />

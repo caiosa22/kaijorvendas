@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Mail, MessageCircle } from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 
 function WorkshopFooter() {
   return (
@@ -24,23 +24,15 @@ function WorkshopFooter() {
               Nossa equipe está pronta para te ajudar. Entre em contato!
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <a
-                href="https://wa.me/77988281339?text=Ol%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20o%20workshop%20Black%20Varejo%20IA"
+                href="https://wa.me/77988328361?text=Ol%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20o%20workshop%20Black%20Varejo%20IA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl shadow-lg transition-all duration-300"
               >
                 <MessageCircle className="w-5 h-5" />
                 Falar no WhatsApp
-              </a>
-              
-              <a
-                href="mailto:suporte@kaijor.com.br"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-xl border border-gray-700 transition-all duration-300"
-              >
-                <Mail className="w-5 h-5" />
-                Enviar E-mail
               </a>
             </div>
           </motion.div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ShoppingCart, Sparkles, Users } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
 import { ArrowRight } from 'lucide-react'
 
 function WorkshopHero() {
@@ -19,13 +19,7 @@ function WorkshopHero() {
       </div>
 
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+        <div className="max-w-4xl mx-auto text-center">
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -34,107 +28,63 @@ function WorkshopHero() {
               className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-yellow-500 text-black px-6 py-3 rounded-full font-bold text-sm mb-6 shadow-lg shadow-orange-500/50"
             >
               <Sparkles className="w-5 h-5" />
-              OFERTA BLACK FRIDAY
+              LOJAS DE VAREJO E E-COMMERCE
             </motion.div>
 
             {/* Main Headline */}
             <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
-              <span className="block">Workshop Exclusivo</span>
+              <span className="block">Workshop</span>
               <span className="block bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
                 Black Varejo IA
               </span>
-              <span className="block text-2xl md:text-3xl mt-4 text-orange-400">
+              <span className="inline-block text-base md:text-lg mt-4 text-orange-400 whitespace-nowrap">
                 Ao Vivo • 12 de Novembro • 19h
               </span>
             </h1>
 
             {/* Subheading */}
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Aprenda a usar <strong className="text-white">2 Agentes de IA</strong> para 
+              Aprenda a usar <strong className="text-white">Inteligência Artificial</strong> para 
               vender <strong className="text-orange-400">muito mais</strong> nessa Black Friday
             </p>
 
-            {/* Features List */}
-            <ul className="space-y-3 mb-8">
-              {[
-                '📸 Gerador de Imagens para posts e anúncios',
-                '💬 Atendente no WhatsApp 24/7',
-                '🎯 Aumento real de vendas e conversões'
-              ].map((feature, idx) => (
-                <motion.li
-                  key={idx}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4 + idx * 0.1 }}
-                  className="flex items-center text-white font-medium"
-                >
-                  <span className="text-2xl mr-3">{feature.split(' ')[0]}</span>
-                  <span>{feature.split(' ').slice(1).join(' ')}</span>
-                </motion.li>
-              ))}
-            </ul>
+            {/* Pricing Title */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="text-2xl md:text-3xl font-black text-white mb-6 text-center"
+            >
+              Ingressos apenas <span className="text-orange-400">R$ 10</span>
+            </motion.h2>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-6">
+            {/* CTA Button */}
+            <div className="flex justify-center mb-6">
               <motion.a
-                href="https://pay.kiwify.com.br/YuhVoH8"
+                href="#ofertas"
+                onClick={(e) => {
+                  e.preventDefault()
+                  const element = document.getElementById('ofertas')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group flex items-center justify-center gap-3 px-8 py-5 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-black text-lg rounded-2xl shadow-2xl hover:shadow-orange-500/50 transition-all duration-300"
+                className="group flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-black text-base md:text-lg rounded-xl shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 whitespace-nowrap"
               >
-                <ShoppingCart className="w-6 h-6" />
-                Individual - R$ 10
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </motion.a>
-
-              <motion.a
-                href="https://pay.kiwify.com.br/gn2LukF"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group flex items-center justify-center gap-3 px-8 py-5 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-black text-lg rounded-2xl shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 border-2 border-yellow-400"
-              >
-                <Users className="w-6 h-6" />
-                Duplo - R$ 15
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                GARANTIR MINHA VAGA
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.a>
             </div>
 
-            <p className="text-center sm:text-left text-gray-400 text-sm">
+            <p className="text-center text-gray-400 text-sm">
               ✓ Garantia de aprendizado • ✓ Certificado ao final
             </p>
-          </motion.div>
-
-          {/* Right Column - Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="relative">
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-yellow-500/30 rounded-3xl blur-3xl transform scale-110" />
-              
-              {/* Image Container */}
-              <div className="relative bg-gradient-to-br from-gray-800 to-black rounded-3xl p-2 shadow-2xl">
-                <img
-                  src="https://i.postimg.cc/J0Q4wy2m/Co-pia-de-Solucoes-de-IA-2-pdf.png"
-                  alt="Caio Santos - Especialista em IA"
-                  className="w-full h-auto rounded-2xl"
-                />
-              </div>
-
-              {/* Floating Badge */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="absolute -bottom-4 -right-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-black px-6 py-3 rounded-full font-bold shadow-lg"
-              >
-                💎 Certificado Harvard
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
+          </div>
       </div>
 
       {/* Scroll Indicator */}
