@@ -122,11 +122,6 @@ function WorkshopPricing() {
                     <span className={`text-5xl font-black bg-gradient-to-r ${plan.gradient} bg-clip-text text-transparent`}>
                       {plan.price}
                     </span>
-                    {plan.originalPrice && (
-                      <span className="text-green-400 text-sm font-bold">
-                        Economia de {plan.originalPrice.replace('R$ ', '')}
-                      </span>
-                    )}
                   </div>
                 </div>
 
